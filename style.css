@@ -1,0 +1,222 @@
+:root {
+  /* BRAND COLORS */
+  --primary-red: #da291c; /* Red Ring */
+  --primary-orange: #f5a623; /* Gricko Orange */
+
+  /* DARK THEME COLORS */
+  --bg-color: #121212; /* Very dark background */
+  --card-bg: #1e1e1e; /* Dark grey for cards */
+  --text-main: #e0e0e0; /* Light grey text */
+  --text-muted: #a0a0a0; /* Dimmer text for descriptions */
+  --heading-color: #ffffff; /* White for main headers */
+  --accent-color: #f5a623; /* Orange for item names */
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+}
+
+/* HEADER SECTION */
+header {
+  background-color: var(--card-bg);
+  text-align: center;
+  padding: 2rem 1rem;
+  border-bottom: 3px solid var(--primary-red);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.logo-container {
+  max-width: 200px;
+  margin: 0 auto 15px auto;
+}
+
+.logo-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  border: 2px solid var(--primary-orange); /* Orange border around logo */
+}
+
+h1 {
+  color: var(--primary-red);
+  margin: 0;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 0 0 10px rgba(218, 41, 28, 0.3); /* Subtle glow */
+}
+
+.tagline {
+  color: var(--primary-orange);
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-top: 5px;
+}
+
+/* NAVIGATION */
+nav {
+  background-color: var(--primary-red);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 0.5rem 0;
+  overflow-x: auto;
+  white-space: nowrap;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  min-width: 600px;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  display: block;
+  transition: background 0.3s;
+  border-radius: 20px;
+}
+
+nav a:hover {
+  background-color: var(--primary-orange);
+  color: #121212;
+}
+
+/* MENU CONTENT */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 3rem;
+  scroll-margin-top: 100px;
+}
+
+.section-title {
+  color: var(--heading-color);
+  border-left: 8px solid var(--primary-orange);
+  padding-left: 15px;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  background: var(--card-bg); /* Dark background for title */
+  padding: 10px 15px;
+  border-radius: 0 10px 10px 0;
+  display: inline-block;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.menu-item {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Stronger shadow for dark mode */
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+  border-top: 4px solid var(--primary-orange);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  background: #252525; /* Slightly lighter on hover */
+}
+
+.item-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.item-name {
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--accent-color); /* Orange text for items */
+}
+
+.item-price {
+  background-color: var(--primary-red);
+  color: white;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+  white-space: nowrap;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.item-desc {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* FOOTER / CALL BUTTON */
+.footer-cta {
+  background: #000000; /* Pure black footer */
+  border-top: 3px solid var(--primary-red);
+  color: white;
+  text-align: center;
+  padding: 3rem 1rem;
+  margin-top: 3rem;
+  border-radius: 20px 20px 0 0;
+}
+
+.call-btn {
+  background-color: var(--primary-orange);
+  color: #121212;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 15px 40px;
+  border-radius: 50px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 15px;
+  box-shadow: 0 0 15px rgba(245, 166, 35, 0.4); /* Glowing effect */
+  transition: all 0.2s;
+}
+
+.call-btn:hover {
+  transform: scale(1.05);
+  background-color: white;
+  color: var(--primary-red);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+/* MOBILE ADJUSTMENTS */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+  .logo-container {
+    max-width: 150px;
+  }
+}
